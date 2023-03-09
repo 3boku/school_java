@@ -17,7 +17,7 @@ public class 예제4 {
 		num3 = s.nextInt();
 		sum=num1+num2+num3;
 		avg = sum/3;
-		System.out.println("합계: " + sum + "평균 : " + avg);
+		System.out.println("합계: %d 평균: %.1f", sum, avg);
 	}
 
 }

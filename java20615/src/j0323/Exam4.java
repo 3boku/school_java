@@ -18,6 +18,7 @@ public class Exam4 {
 		str[1] = "Java";
 		str[2] = "World";
 		//¿ì¿Í ±ê °³Â¼·¯~
+		// Git is Amazing and golang amazing too
 		for(int i =0; i < str.length ; i++) {
 			System.out.println(str[i]); 
 		}

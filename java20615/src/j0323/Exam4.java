@@ -17,6 +17,7 @@ public class Exam4 {
 		str[0] = "Hello";
 		str[1] = "Java";
 		str[2] = "World";
+		//¿ì¿Í ±ê °³Â¼·¯~
 		for(int i =0; i < str.length ; i++) {
 			System.out.println(str[i]); 
 		}

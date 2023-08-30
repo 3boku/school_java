@@ -17,11 +17,11 @@ public class Exam4 {
 		str[0] = "Hello";
 		str[1] = "Java";
 		str[2] = "World";
-		//¿ì¿Í ±ê °³Â¼·¯~
+		//ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Â¼ï¿½ï¿½~
 		// Git is Amazing and golang amazing too
 		for(int i =0; i < str.length ; i++) {
 			System.out.println(str[i]); 
 		}
-		System.out.println("Java down, Golang Up")
+		System.out.println("Java down, Golang Up");
 	}
 }

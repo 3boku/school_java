@@ -2,8 +2,12 @@ package swingalk;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.AdjustmentEvent;
+import java.awt.event.AdjustmentListener;
 
-public class SelectRGB extends JDialog {
+public class SelectRGB extends JDialog implements ActionListener, AdjustmentListener{
     JScrollBar RS, GS, BS;
     JLabel label_r, label_g, label_b;
     JLabel sample;
@@ -44,6 +48,38 @@ public class SelectRGB extends JDialog {
         p0.add(btnOK);
         p0.add(btnNo);
 
+        btnOK.addActionListener(this);
+        btnNo.addActionListener(this);
+
+        RS.addAdjustmentListener(this);
+        GS.addAdjustmentListener(this);
+        BS.addAdjustmentListener(this);
+
         setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource()==btnOK) {
+            changeColor = true;
+            setVisible(false);
+        } else if(e.getSource()==btnNo) {
+            changeColor = false;
+            setVisible(false);
+        }
+    }
+
+    @Override
+    public void adjustmentValueChanged(AdjustmentEvent e) {
+        if(e.getSource()==RS) {
+            label_r.setText(Integer.toString(RS.getValue()));
+        } else if(e.getSource()==GS) {
+            label_g.setText(Integer.toString(GS.getValue()));
+        } else if(e.getSource()==BS) {
+            label_b.setText(Integer.toString(BS.getValue()));
+        }
+
+        Color color = new Color(RS.getValue(), GS.getValue(), BS.getValue());
+        sample.setBackground(color);
     }
 }

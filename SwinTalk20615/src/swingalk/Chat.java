@@ -143,6 +143,8 @@ public class Chat extends JFrame implements ActionListener {
 
         }else if(e.getSource() == menuItem[2]) {
             SelectFont font = new SelectFont();
+            if(font.changeFont)
+                userLabel.setFont(font.sample.getFont());
 
         }else if(e.getSource() == menuItem[3]) {}
     }
